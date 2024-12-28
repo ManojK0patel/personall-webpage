@@ -6,68 +6,83 @@
     <title>My Personal Webpage</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f0f4f8;
             color: #333;
         }
         header {
-            background: #007acc;
+            background: linear-gradient(135deg, #007acc, #005f99);
             color: #fff;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         nav {
             margin: 0 auto;
-            padding: 0.5rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding-top: 0.5rem;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 1rem;
+            font-size: 1.1rem;
+            transition: color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #ffcc00;
         }
         section {
             padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 2rem auto;
             background: #fff;
-            margin-bottom: 1rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         h1, h2 {
-            color: #007acc;
+            color: #005f99;
+        }
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
         }
         footer {
             text-align: center;
             padding: 1rem 0;
             background: #333;
             color: #fff;
-            margin-top: 1rem;
+            font-size: 0.9rem;
+            margin-top: 2rem;
         }
         .contact-form {
             display: flex;
             flex-direction: column;
+            gap: 1rem;
         }
         .contact-form input, .contact-form textarea {
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
             font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #007acc;
+            outline: none;
         }
         .contact-form button {
-            padding: 0.5rem;
+            padding: 0.8rem;
             border: none;
             background: #007acc;
             color: #fff;
             font-size: 1rem;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         .contact-form button:hover {
             background: #005f99;
@@ -114,7 +129,7 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>Feel free to reach out to me for collaborations or queries.</p>
-        <form class="contact-form">
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
